@@ -9,3 +9,8 @@ filetype plugin on  " Enable automatic file type detection
 
 set autoindent      " Maintain indentation when pressing Enter
 set smartindent     " Automatically adjust indentation for code
+
+set clipboard=unnamedplus
+
+autocmd FileType python highlight OverLength ctermbg=red guibg=red
+autocmd FileType python match OverLength /\%81v.*/
