@@ -1,0 +1,36 @@
+icons_format = "{icon}"
+
+[theme]
+theme = "bad-wolf"
+
+[icons]
+icons = "awesome4"
+
+[[block]]
+block = "cpu"
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "available"
+alert_unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+format = " $icon $available.eng(w:2)"
+
+[[block]]
+block = "docker"
+format = "$icon $running/$images"
+
+[[block]]
+block = "time"
+interval = 5
+format = " $timestamp.datetime(f:'%a %d/%m %R')"
+
+[[block]]
+block = "pomodoro"
+
+[[block]]
+block = "battery"
+format = " $icon $percentage ($time_remaining)($power)  "
